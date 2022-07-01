@@ -1,0 +1,34 @@
+/* .dropzone{
+    display: flex;
+    margin-left: 30em;
+    width: 320px;
+    height: 100px;
+    border: 3px solid black;
+    margin-top: 200px;
+        }
+
+
+    #img1
+    {
+            margin: 0 auto;
+        } */
+
+.header{
+    background-color: rgb(21, 91, 134);
+    padding-bottom: .5em;
+    padding-left: 2em;
+    color: gold;
+    padding-top: .5em   ;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.firsinput{
+display: inline-block;
+margin-left: 18.5em;
+margin-top: 20px;
+width: 300px;
+}
