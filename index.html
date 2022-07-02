@@ -14,178 +14,55 @@
 
 <body>
 
-    <!-- pratik -->
-    <!-- <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<img id="img1" src="coder-logo.png" alt="coder-logo" draggable="true" ondragstart="drag(event)"> -->
-    <!-- pratik -->
-
-    <!-- pratik2 -->
-    <!-- <img id="img" src="coder-logo.png" alt="coder-logo">
-<div>
-<button onclick="eventListenerBagla()">Göster</button>
-<button onclick="eventListenerGizle()">Gizle</button>
-</div>
-
-<script>
-    function eventListenerBagla() {
-        document.getElementById('img').addEventListener('mouseover', show)
-    }
-function
-eventListenerGizle(){
-    document.getElementById('img').removeEventListener('mouseover', show)
-
-}
-
-function show(){
-    alert('üzerinde');
-}
-
-</script> -->
-    <!-- pratik2 -->
-
-
-    <!-- ödev TO-DO -->
-
     <div class="header">
         <h1>Amac's To-Do</h1>
     </div>
 
     <div class="container-input">
-                <form id="addTodoForm"  >
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="txtTodoName" placeholder="Yeni bir görev ekle...">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary"><i class="bi bi-plus-circle"></i></button>
-                        </div>
-                    </div>
+        <form id="addTodoForm">
+            <div class="input-group">
+                <input type="text" class="form-control" id="txtTodoName" placeholder="Yeni görev ekleyin...">
+                <div class="input-group-append">
+                    <button class="btn btn-primary"><i class="bi bi-plus-circle"></i></button>
+                </div>
             </div>
-        </div>
+    </div>
+    </div>
     </div>
 
-    <!-- <div class="container-cards row-cols-5">
-            <div class="card border-warning mb-3 mt-4">
+      <div class="container mt-4">
+        <div class="card-group card border-warning">
+            <div class="card" ondrop="drop(event)" ondragstart="drag(event)" ondragover="allowDrop(event)">
+                <!-- <div> -->
                 <div class="card-header">Bekliyor</div>
                 <div class="card-body">
-                </div>
-                <ul id="todo-list" class="list-group">
-                    <li class="list-group-item list-group-item">
-                        todo Item1
-                        <a class="delete-item float-end">
-                            <i class="bi bi-trash-fill"></i>
-                        </a>
-                    </li>
-                    <li class="list-group-item list-group-item-secondary">
-                        todo Item1
-                        <a class="delete-item float-end">
-                            <i class="bi bi-trash-fill"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="card border-warning mb-3 mt-4">
-                <div class="card-header">Yapılıyor
-                </div>
-                <div class="card-body">
-                </div>
-                <ul id="todo-list2" class="list-group">
-                    <li class="list-group-item list-group-item">
-                        todo Item1
-                        <a class="delete-item float-end">
-                            <i class="bi bi-trash-fill"></i>
-                        </a>
-                    </li>
-                    <li class="list-group-item list-group-item-secondary">
-                        todo Item1
-                        <a class="delete-item float-end">
-                            <i class="bi bi-trash-fill"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="card border-warning mb-3 mt-4">
-                <div class="card-header">Tamamlandı
-                    <a id="btnDeleteAll" class="btn btn-outline-danger btn-sm delete-all float-end">Delete All</a>
-                </div>
-                <div class="card-body">
-                </div>
-                <ul id="todo-list3" class="list-group">
-                    <li class="list-group-item list-group-item">
-                        todo Item1
-                        <a class="delete-item float-end">
-                            <i class="bi bi-trash-fill"></i>
-                        </a>
-                    </li>
-                    <li class="list-group-item list-group-item-secondary">
-                        todo Item1
-                        <a class="delete-item float-end">
-                            <i class="bi bi-trash-fill"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-    </div>
-     -->
 
-    <div class="container mt-4">
-        <div class="card-group card border-warning">
-            <div class="card">
-                <div class="card-body"  >
-                    <div class="card-header">Bekliyor</div>
-                    <div class="card-body">
-                    </div>
-                    <ul id="todo-list" ondrop="drop(event)" ondragover="allowDrop(event)" class="list-group list-group" > 
-                        <!-- <li class="list-group-item list-group-item">
-                            <a class="delete-item float-end">
-                                <i class="bi bi-trash-fill"></i>
-                            </a>
-                        </li>
-                        <li class="list-group-item list-group-item-secondary">
-                            <a class="delete-item float-end">
-                                <i class="bi bi-trash-fill"></i>
-                            </a>
-                        </li> -->
+                    <ul id="todo-list" class="list-group list-group ">
                     </ul>
                 </div>
+                <!-- </div> -->
             </div>
-            <div class="card">
-                <div class="card-body">
+            <div class="card" ondrop="drop(event)" ondragstart="drag(event)" ondragover="allowDrop(event)">
+                <div>
                     <div class="card-header">Yapılıyor</div>
                     <div class="card-body">
+                        <ul id="doing" class="list-group">
+                        </ul>
                     </div>
-                    <ul id="doing" ondrop="drop(event)" ondragover="allowDrop(event)" class="list-group">
-                        <!-- <li class="list-group-item list-group-item">
-                            <a class="delete-item float-end">
-                                <i class="bi bi-trash-fill"></i>
-                            </a>
-                        </li>
-                        <li class="list-group-item list-group-item-secondary">
-                            <a class="delete-item float-end">
-                                <i class="bi bi-trash-fill"></i>
-                            </a>
-                        </li> -->
-                    </ul>
+
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body">
+            <div class="card" ondrop="drop(event)" ondragstart="drag(event)" ondragover="allowDrop(event)">
+                <div>
                     <div class="card-header">Tamamlandı
                         <a id="btnDeleteAll" class="btn btn-outline-danger btn-sm delete-all float-end">Hepsini Sil</a>
                     </div>
                     <div class="card-body">
+                        <ul id="done" class="list-group">
+
+                        </ul>
                     </div>
-                    <ul id="done" ondrop="drop(event)" ondragover="allowDrop(event)" class="list-group-item-secondary">
-                        <!-- <li class="list-group-item list-group-item">
-                            <a class="delete-item float-end">
-                                <i class="bi bi-trash-fill"></i>
-                            </a>
-                        </li>
-                        <li class="list-group-item list-group-item-secondary">
-                            <a class="delete-item float-end">
-                                <i class="bi bi-trash-fill"></i>
-                            </a>
-                        </li> -->
-                    </ul>
+
                 </div>
             </div>
         </div>
