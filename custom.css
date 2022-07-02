@@ -13,6 +13,10 @@
             margin: 0 auto;
         } */
 
+        body {
+            background: linear-gradient();
+        }
+
 .header{
     background-color: rgb(21, 91, 134);
     padding-bottom: .5em;
@@ -21,14 +25,33 @@
     padding-top: .5em   ;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
+.container-input{
+display: flex;
+justify-content: center;
+margin-left: 6em;
+margin-top: 7em;
+width: 300px;
 }
 
-.firsinput{
-display: inline-block;
-margin-left: 18.5em;
-margin-top: 20px;
-width: 300px;
+.container-cards{
+display: flex;
+justify-content: center;
+}
+
+.container-cards div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-cards a{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.card-header{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-header a:hover{
+    text-decoration: underline;
 }
