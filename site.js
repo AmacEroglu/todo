@@ -43,6 +43,9 @@ function addNewItem(e) {
     }
 
     const li = document.createElement('li');
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
     if (bgColor) {
         li.classList = ('list-group-item list-group-item-secondary');
         bgColor = false;
@@ -52,8 +55,8 @@ function addNewItem(e) {
     }
 
     li.setAttribute("id", Math.random());
-    li.setAttribute("draggable", "true");
-    li.setAttribute("ondragstart", "drag(event)");
+    li.draggable = 'true';
+
 
     li.appendChild(document.createTextNode(input.value));
     const a = document.createElement('a');
