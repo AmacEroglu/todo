@@ -8,7 +8,6 @@ function drag(ev) {
 }
 
 function drop(ev) {
-    console.log(ev.target)
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
 
@@ -80,7 +79,7 @@ function addNewItem(e) {
         li.classList = ('list-group-item list-group-item');
         bgColor = true;
     }
-    li.id = 'todolar' + sayac;
+    li.id = 'todolar' + sayac
     sayac++;
     li.appendChild(document.createTextNode(input.value));
     li.draggable = 'true';
@@ -103,7 +102,6 @@ function deleteItem(e) {
 }
 
 function deleteAllItems(e) {
-
     if (confirm('Silmek istediğinize emin misiniz?')) {
 
         while (todoList.firstChild) {
