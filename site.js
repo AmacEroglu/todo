@@ -56,7 +56,10 @@ function addAllEventListener() {
 
     form.addEventListener('submit', addNewItem);
     todoList.addEventListener('click', deleteItem);
+    doing.addEventListener('click', deleteItem);
+    done.addEventListener('click', deleteItem);
     btnDeleteAll.addEventListener('click', deleteAllItems);
+
 }
 
 
@@ -96,8 +99,11 @@ function addNewItem(e) {
 function deleteItem(e) {
     e.preventDefault();
     if (e.target.className == 'bi bi-trash-fill') {
-        confirm('Silmek istediğinize emin misiniz?');
-        e.target.parentElement.parentElement.remove();
+        var result = confirm('Silmek istediğinize emin misiniz?');
+        if (result) {
+            e.target.parentElement.parentElement.remove();
+
+        }
     }
 }
 
@@ -114,6 +120,5 @@ function deleteAllItems(e) {
             done.removeChild(done.firstChild);
         }
     }
-
 
 }
