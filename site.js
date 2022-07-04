@@ -34,6 +34,10 @@ function drop(ev) {
         ev.target.parentNode.parentNode.parentNode.appendChild(document.getElementById(data));
     }
 
+    if (ev.target.className == "btn btn-outline-danger btn-sm delete-all float-end") {
+        ev.target.parentNode.nextElementSibling.childNodes[1].appendChild(document.getElementById(data));
+    }
+
 
 
 }
@@ -49,6 +53,7 @@ const todoList1 = document.querySelector('#doing')
 const todoList2 = document.querySelector('#done')
 var sayac = 0;
 var icerikdolu = false;
+let items;
 
 let bgColor = 0;
 addAllEventListener();
@@ -72,7 +77,7 @@ function addNewItem(e) {
         alert('Lütfen bir görev ekleyin')
         return;
     }
-    icerikdolu=true;
+    icerikdolu = true;
     const li = document.createElement('li');
 
     if (bgColor) {
@@ -94,6 +99,7 @@ function addNewItem(e) {
     li.appendChild(a);
     todoList.appendChild(li);
 
+    setItemToLS(input.value);
 }
 
 function deleteItem(e) {
@@ -109,13 +115,13 @@ function deleteItem(e) {
 
 function deleteAllItems(e) {
 
-     if (  icerikdolu==false) {
+    if (icerikdolu == false) {
         alert('Silinecek bir şey bulunmuyor.');
-         return;
-     }
+        return;
+    }
 
     if (confirm('Silmek istediğinize emin misiniz?')) {
-      icerikdolu=false;
+        icerikdolu = false;
         while (todoList.firstChild) {
             todoList.removeChild(todoList.firstChild);
         }
@@ -126,5 +132,23 @@ function deleteAllItems(e) {
             done.removeChild(done.firstChild);
         }
     }
+
+}
+
+function setItemToLS(text) {
+    localStorage.setItem('todo', text);
+    input.value = "";
+
+}
+
+function getItemsFromLS() {
+
+}
+
+function loadItems() {
+
+}
+
+function deleteItemFromLS() {
 
 }
