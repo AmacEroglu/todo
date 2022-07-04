@@ -48,6 +48,7 @@ const todoList = document.querySelector('#todo-list')
 const todoList1 = document.querySelector('#doing')
 const todoList2 = document.querySelector('#done')
 var sayac = 0;
+var icerikdolu = false;
 
 let bgColor = 0;
 addAllEventListener();
@@ -71,10 +72,9 @@ function addNewItem(e) {
         alert('Lütfen bir görev ekleyin')
         return;
     }
-
+    icerikdolu=true;
     const li = document.createElement('li');
 
-    //burada da dedim ki tasimayi baslattigi anda drag fonksiyonunu cagir
     if (bgColor) {
         li.classList = ('list-group-item list-group-item-secondary');
         bgColor = false;
@@ -108,8 +108,14 @@ function deleteItem(e) {
 }
 
 function deleteAllItems(e) {
-    if (confirm('Silmek istediğinize emin misiniz?')) {
 
+     if (  icerikdolu==false) {
+        alert('Silinecek bir şey bulunmuyor.');
+         return;
+     }
+
+    if (confirm('Silmek istediğinize emin misiniz?')) {
+      icerikdolu=false;
         while (todoList.firstChild) {
             todoList.removeChild(todoList.firstChild);
         }
